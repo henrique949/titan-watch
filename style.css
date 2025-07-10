@@ -1,0 +1,595 @@
+/* Universal Box-Sizing for better control */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden; /* Prevents horizontal scroll on smaller screens */
+}
+
+/* --- Header and Navigation --- */
+.topo {
+    position: fixed;
+    width: 100%;
+    z-index: 1000; /* Increased z-index to ensure it's on top */
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.nav-bar {
+    width: 80%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    border-radius: 22px;
+    backdrop-filter: blur(10.5px);
+    -webkit-backdrop-filter: blur(10.5px);
+    background-color: rgba(0, 0, 0, 0.2); /* Adjusted alpha for clarity */
+    box-shadow: #ffffff 0 10px 10px;
+    padding: 0 20px; /* Add some horizontal padding */
+}
+
+.nav-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav-link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: "Anton", sans-serif;
+    font-weight: 500;
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+.nav-link:hover {
+    color: #ffd700; /* Example hover effect */
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url(../assents/image/Whisk_f49be9a397.jpg);
+    background-size: cover;
+    background-position: center; /* Center background image */
+    background-color: rgba(0, 0, 0, 0.55); /* Darker overlay for better text contrast */
+    background-blend-mode: multiply;
+}
+
+.descricao-hero {
+    width: 50%;
+    height: 100vh; /* Maintain height for visual effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: azure;
+    padding: 22px;
+    background: rgba(0, 0, 0, 0.19);
+    background: linear-gradient(125deg, rgba(0, 0, 0, 0.19), rgba(0, 0, 0, 0.18), rgba(222, 219, 219, 0), rgba(252, 252, 252, 0));
+}
+
+.texto-hero {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+    font-family: "Outfit", sans-serif;
+    color: #ffffff;
+}
+
+.hat-hero {
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.titulo-hero {
+    width: 100%;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.titulo-descritivo-hero {
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 300;
+    padding: 16px;
+    line-height: 1.5;
+}
+
+/* --- About Section (Major Responsiveness Overhaul) --- */
+.section-sobre {
+    width: 100%;
+    background-color: black;
+    padding: 50px 20px; /* Add vertical padding for separation */
+    display: flex;
+    flex-direction: column; /* Default to column for easier stacking */
+    align-items: center; /* Center content horizontally */
+}
+
+/* Flex container for the first image and text block */
+.about-top-content, .about-bottom-content {
+    display: flex;
+    flex-direction: row; /* Default desktop layout */
+    width: 100%;
+    max-width: 1200px; /* Limit width on very large screens */
+    margin-bottom: 40px; /* Space between blocks */
+    align-items: center;
+    gap: 20px; /* Space between elements */
+}
+
+.img-sobre {
+    width: 50%; /* Take half width on desktop */
+    height: 500px; /* Adjusted fixed height, will be responsive */
+    background-image: url(../assents/image/Whisk_gu1y2mwndg.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.texto-sobre {
+    width: 50%; /* Take half width on desktop */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 16px;
+    color: #ffffffcc;
+}
+
+.titulo-descricao {
+    /* No absolute positioning */
+    color: #ffffff;
+    font-family: "Outfit", sans-serif;
+    margin-bottom: 20px;
+    text-align: left; /* Align text to left */
+}
+
+.texto-continer-sobre {
+    /* No absolute positioning */
+    font-size: 18px;
+    font-family: "Outfit", sans-serif;
+    line-height: 1.6;
+    text-align: left; /* Align text to left */
+}
+
+.sobre-continer {
+    width: 100%;
+    max-width: 1200px; /* Limit width */
+    height: auto; /* Allow height to adjust */
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center; /* Center items in the list */
+    list-style: none;
+    padding: 30px 0;
+    gap: 20px; /* Space between cards */
+}
+
+.sobre-texto {
+    background-color: #fffffff0;
+    flex: 1 1 calc(33% - 40px); /* Approx. 3 cards per row, flexible width */
+    max-width: 350px; /* Max width for individual cards */
+    min-height: 130px; /* Use min-height for flexibility */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    font-size: 18px;
+    font-family: "Outfit", sans-serif;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add a subtle shadow */
+}
+
+.image-sobre {
+    width: 50%; /* Take half width on desktop */
+    height: 500px; /* Adjusted fixed height, will be responsive */
+    background-image: url(../assents/image/Whisk_wq0mzrjy2u.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.texte-descricao-sobre {
+    width: 50%; /* Take half width on desktop */
+    /* No absolute positioning */
+    color: #ffffffcc;
+    font-size: 18px;
+    font-family: "Outfit", sans-serif;
+    line-height: 1.6;
+    padding: 16px;
+    text-align: left; /* Align text to left */
+}
+
+/* --- Events Section --- */
+.section-eventos {
+    width: 100%;
+    height: auto; /* Auto height for content */
+    background-color: black;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.texto-evento {
+    width: 100%;
+    max-width: 900px; /* Limit width for readability */
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    text-align: center;
+}
+
+.evento-titulo {
+    color: #ffffff;
+    font-family: "Outfit", sans-serif;
+    margin-bottom: 20px;
+}
+
+.evento-texto {
+    font-size: 18px;
+    color: #ffffffc9;
+    font-family: "Outfit", sans-serif;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.img-evento {
+    width: 100%;
+    max-width: 900px; /* Limit width for desktop view */
+    height: 500px; /* Fixed height for desktop, will be responsive */
+    background-image: url(../assents/image/Whisk_zvjm2zjmta.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-top: 20px;
+    border-radius: 8px; /* Slightly rounded corners */
+}
+
+.evento-locar, .evento-dia {
+    font-size: 18px;
+    color: #ffffffc9;
+    font-family: "Outfit", sans-serif;
+    margin-top: 10px;
+}
+
+/* --- Contact Section --- */
+.contato {
+    width: 100%;
+    height: auto; /* Auto height for content */
+    background-color: black;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contato-titolu {
+    color: #ffffff;
+    padding: 16px;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contato-titolu-conteine {
+    color: #ffffff;
+    font-family: "Outfit", sans-serif;
+}
+
+.contato-texto {
+    color: #ffffff8e;
+    font-size: 18px;
+    font-family: "Outfit", sans-serif;
+    line-height: 1.6;
+    max-width: 700px; /* Limit width for readability */
+}
+
+form {
+    max-width: 600px; /* Adjusted max-width */
+    width: 100%; /* Ensure it takes full width up to max-width */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #000;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    color: #000;
+    font-size: 1rem;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+form button {
+    background-color: #000;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Full width button */
+}
+
+form button:hover {
+    background-color: #333;
+}
+
+.botoes {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow buttons to wrap */
+    justify-content: center; /* Center buttons */
+    padding: 16px;
+}
+
+.btn-escuro {
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s;
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000;
+}
+
+.btn-escuro:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+/* --- Footer --- */
+.rodape {
+    width: 100%;
+    height: 80px; /* Example fixed height for footer */
+    background-color: #1a1a1a; /* Darker footer */
+}
+
+/* --- Media Queries --- */
+
+/* Tablet and Smaller Desktops (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .nav-bar {
+        width: 90%;
+    }
+
+    .descricao-hero {
+        width: 60%; /* Take more width on tablets */
+    }
+
+    .titulo-hero {
+        font-size: 28px;
+    }
+
+    .titulo-descritivo-hero {
+        font-size: 15px;
+    }
+
+    /* About Section */
+    .about-top-content, .about-bottom-content {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;
+    }
+
+    .img-sobre, .texto-sobre, .image-sobre, .texte-descricao-sobre {
+        width: 100%; /* Full width for stacked elements */
+    }
+
+    .img-sobre, .image-sobre {
+        height: 400px; /* Adjust image height for tablets */
+    }
+
+    .texto-sobre, .texte-descricao-sobre {
+        padding: 15px 0; /* Adjust padding for stacked text */
+        text-align: center; /* Center text for stacked layout */
+        align-items: center; /* Center flex items */
+    }
+
+    .titulo-descricao,
+    .texto-continer-sobre,
+    .texte-descricao-sobre {
+        text-align: center; /* Ensure text is centered */
+    }
+
+    .sobre-continer {
+        padding: 20px 0;
+        gap: 15px;
+    }
+
+    .sobre-texto {
+        flex: 1 1 calc(48% - 30px); /* Two cards per row */
+        max-width: 400px;
+    }
+
+    /* Events Section */
+    .img-evento {
+        height: 400px;
+    }
+}
+
+/* Mobile Devices (max-width: 767px) */
+@media (max-width: 767px) {
+    .topo {
+        padding: 10px;
+    }
+
+    .nav-bar {
+        width: 95%; /* Make navigation wider for small screens */
+        height: auto; /* Allow height to adjust based on content */
+        flex-direction: column; /* Stack nav items if needed */
+        padding: 10px;
+    }
+
+    .nav-list {
+        flex-direction: column; /* Stack navigation links vertically */
+        gap: 10px; /* Space between stacked links */
+    }
+
+    .nav-link {
+        font-size: 16px;
+        padding: 5px 0;
+    }
+
+    .hero-section {
+        height: auto; /* Allow hero section height to adjust */
+        min-height: 70vh; /* Minimum height for hero */
+        justify-content: center; /* Center content on mobile */
+    }
+
+    .descricao-hero {
+        width: 100%; /* Full width on mobile */
+        height: auto;
+        padding: 30px 15px;
+        background: rgba(0, 0, 0, 0.65); /* More solid background for better readability */
+    }
+
+    .titulo-hero {
+        font-size: 26px;
+    }
+
+    .titulo-descritivo-hero {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* About Section */
+    .section-sobre {
+        padding: 30px 10px;
+    }
+
+    .img-sobre, .image-sobre {
+        height: 280px; /* Smaller height for mobile images */
+    }
+
+    .titulo-descricao {
+        font-size: 26px;
+    }
+
+    .texto-continer-sobre,
+    .texte-descricao-sobre {
+        font-size: 15px;
+    }
+
+    .sobre-continer {
+        flex-direction: column; /* Stack cards vertically */
+        gap: 15px;
+        padding: 20px 10px;
+    }
+
+    .sobre-texto {
+        width: 100%; /* Full width for cards on mobile */
+        max-width: 90%; /* Ensure max width is applied */
+        min-height: 100px;
+        font-size: 15px;
+    }
+
+    /* Events Section */
+    .section-eventos {
+        padding: 30px 10px;
+    }
+
+    .evento-titulo {
+        font-size: 26px;
+    }
+
+    .evento-texto, .evento-locar, .evento-dia {
+        font-size: 15px;
+    }
+
+    .img-evento {
+        height: 280px;
+    }
+
+    /* Contact Section */
+    .contato {
+        padding: 30px 10px;
+    }
+
+    .contato-titolu {
+        margin-bottom: 20px;
+    }
+
+    .contato-titolu-conteine {
+        font-size: 26px;
+    }
+
+    .contato-texto {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    form input, form textarea, form button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .botoes {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn-escuro {
+        width: 90%; /* Buttons take more width */
+        text-align: center;
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+
+.rodape{
+  background-color: black;
+}
